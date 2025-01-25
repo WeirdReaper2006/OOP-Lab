@@ -3,8 +3,8 @@
 #include <string>
 using namespace std;
 
-#ifndef STUDENT_HPP
-#define STUDENT_HPP
+#ifndef STUDENT_H
+#define STUDENT_H
 
 class Student
 {
