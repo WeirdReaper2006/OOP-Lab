@@ -15,18 +15,18 @@ class Player
 private:
     string name;
     int Health_Points;
-    int Stamina_Points;
     Weapon rightHand;
     int Moves_Remaining;
     int Max_Health;
-    int Inventory_Capacity;
-    vector<Item> Inventory[5];
+    int Inventory_Capacity; // Maximum number of items player can carry
+    Item *Inventory;        // Pointer to dynamic array
+    int inventorySize;      // Current number of items
     Room *currentRoom;
 
 public:
     // Constructors
     Player();
-    Player(string name, int Health_Points, int Attack_Points, int Stamina_Points, int Moves_Remaining, int Max_Health, Room *currentRoom, int Inventory_Capacity);
+    Player(string name, int Health_Points, int Moves_Remaining, int Max_Health, Room *currentRoom, int Inventory_Capacity);
 
     // Destructor
     ~Player();
@@ -41,26 +41,19 @@ public:
     int getHealthPoints();
     void setHealthPoints(int Health_Points);
 
-    int getAttackPoints();
-    void setAttackPoints(int Attack_Points);
-
-    int getStaminaPoints();
-    void setStaminaPoints(int Stamina_Points);
-
     int getMovesRemaining();
     void setMovesRemaining(int Moves_Remaining);
 
-    vector<Item> getInventory(int index);
+    Item getInventory(int index);
 
     // General Methods
-    void DisplayInventory(vector<Item> Inventory);
+    void DisplayInventory(Item Inventory[]);
     void DisplayStats();
     void Attack(Enemy *enemy);
     void PickUpItem(Item item);
     void DropItem(Item item);
     void UseItem(Item item);
-    void MoveForward(string direction);
-    void MoveBackward(string direction);
+    void Move(string direction);
 };
 
 #endif

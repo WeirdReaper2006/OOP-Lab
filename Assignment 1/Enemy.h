@@ -19,20 +19,23 @@ public:
     Enemy(string name, int damage, int health);
 
     // Destructor
-    virtual ~Enemy() = 0;
+    ~Enemy();
 
     // Getter and Setter Methods
-    virtual string getName() = 0;
-    virtual void setName(string name) = 0;
+    string getName();
+    void setName(string name);
 
-    virtual int getAttack() = 0;
-    virtual void setAttack(int attack) = 0;
+    int getAttack();
+    void setAttack(int attack);
 
-    virtual int getHealth() = 0;
-    virtual void setHealth(int health) = 0;
+    int getHealth();
+    void setHealth(int health);
 
-    virtual bool getIsAlive() = 0;
-    virtual void setIsAlive(bool isAlive) = 0;
+    bool getIsAlive();
+    void setIsAlive(bool isAlive);
+
+    // General Methods
+    void display();
 };
 
 #endif

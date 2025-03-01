@@ -3,6 +3,8 @@
 
 #include <string>
 #include <iostream>
+#include "Enemy.h"
+#include "Treasure.h"
 using namespace std;
 
 class Room
@@ -12,11 +14,13 @@ private:
     string description;
     Room *next;
     Room *previous;
+    Enemy *enemy;
+    Treasure *treasure;
 
 public:
     // Constructors
     Room();
-    Room(string name, string description, Room *next, Room *previous);
+    Room(string name, string description, Room *next, Room *previous, Enemy *enemy, Treasure *treasure);
 
     // Destructor
     ~Room();
@@ -33,6 +37,12 @@ public:
 
     Room *getPrevious();
     void setPrevious(Room *previous);
+
+    Enemy *getEnemy();
+    void setEnemy(Enemy *enemy);
+
+    Treasure *getTreasure();
+    void setTreasure(Treasure *treasure);
 
     // General Methods
     void display();

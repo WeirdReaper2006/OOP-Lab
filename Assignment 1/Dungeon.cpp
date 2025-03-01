@@ -9,25 +9,29 @@ using namespace std;
 Dungeon::Dungeon()
 {
     name = "";
-    level = 0;
     numRooms = 1;
-    firstRoom = new Room("Room 1", "This is the first room", nullptr, nullptr);
+    Enemy *enemy = nullptr;
+    Treasure *treasure = nullptr;
+    firstRoom = new Room("Room 1", "This is the first room", nullptr, nullptr, enemy, treasure);
     firstRoom->setPrevious(nullptr);
     numMonsters = 0;
     numTreasure = 0;
 }
 
-Dungeon::Dungeon(string name, int level, int numRooms, int numMonsters, int numTreasure)
+Dungeon::Dungeon(string name, int numRooms, int numMonsters, int numTreasure)
 {
     this->name = name;
-    this->level = level;
     this->numRooms = numRooms;
-    firstRoom = new Room("Room 1", "This is the first room", nullptr, nullptr);
+    Enemy *enemy = nullptr;
+    Treasure *treasure = nullptr;
+    firstRoom = new Room("Room 1", "This is the first room", nullptr, nullptr, enemy, treasure);
     firstRoom->setPrevious(nullptr);
     Room currentRoom = *firstRoom;
     for (int i = 1; i < numRooms; i++)
     {
         Room *newRoom = new Room();
+        newRoom->setName("Room " + to_string(i + 1));
+        newRoom->setDescription("This is room " + to_string(i + 1));
         newRoom->setPrevious(&currentRoom);
         currentRoom.setNext(newRoom);
     }
@@ -49,16 +53,6 @@ string Dungeon::getName()
 void Dungeon::setName(string name)
 {
     this->name = name;
-}
-
-int Dungeon::getLevel()
-{
-    return level;
-}
-
-void Dungeon::setLevel(int level)
-{
-    this->level = level;
 }
 
 int Dungeon::getNumRooms()
@@ -95,7 +89,6 @@ void Dungeon::setNumTreasure(int numTreasure)
 void Dungeon::print()
 {
     cout << "Dungeon Name: " << name << endl;
-    cout << "Dungeon Level: " << level << endl;
     cout << "Number of Rooms: " << numRooms << endl;
     cout << "Number of Monsters: " << numMonsters << endl;
     cout << "Number of Treasure: " << numTreasure << endl;

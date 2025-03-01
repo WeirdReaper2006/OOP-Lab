@@ -11,7 +11,6 @@ class Dungeon
 {
 private:
     string name;
-    int level;
     int numRooms;
     int numMonsters;
     int numTreasure;
@@ -20,7 +19,7 @@ public:
     Room *firstRoom;
     // Constructors
     Dungeon();
-    Dungeon(string name, int level, int numRooms, int numMonsters, int numTreasure);
+    Dungeon(string name, int numRooms, int numMonsters, int numTreasure);
 
     // Destructor
     ~Dungeon();

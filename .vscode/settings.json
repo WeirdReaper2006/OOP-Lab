@@ -7,7 +7,9 @@
     "iostream": "cpp",
     "new": "cpp",
     "type_traits": "cpp",
-    "string": "cpp"
+    "string": "cpp",
+    "ios": "cpp",
+    "xutility": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [

@@ -12,12 +12,14 @@ Room::Room()
     previous = nullptr;
 }
 
-Room::Room(string name, string description, Room *next, Room *previous)
+Room::Room(string name, string description, Room *next, Room *previous, Enemy *enemy, Treasure *treasure)
 {
     this->name = name;
     this->description = description;
     this->next = next;
     this->previous = previous;
+    this->enemy = enemy;
+    this->treasure = treasure;
 }
 
 // Destructor
@@ -64,6 +66,26 @@ Room *Room::getPrevious()
 void Room::setPrevious(Room *previous)
 {
     this->previous = previous;
+}
+
+Enemy *Room::getEnemy()
+{
+    return enemy;
+}
+
+void Room::setEnemy(Enemy *enemy)
+{
+    this->enemy = enemy;
+}
+
+Treasure *Room::getTreasure()
+{
+    return treasure;
+}
+
+void Room::setTreasure(Treasure *treasure)
+{
+    this->treasure = treasure;
 }
 
 // General Methods
