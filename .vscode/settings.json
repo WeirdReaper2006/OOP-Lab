@@ -9,11 +9,12 @@
     "type_traits": "cpp",
     "string": "cpp",
     "ios": "cpp",
-    "xutility": "cpp"
+    "xutility": "cpp",
+    "exception": "cpp",
+    "memory": "cpp",
+    "iterator": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
-  "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
-    "clang-diagnostic-error"
-  ],
+  "C_Cpp.codeAnalysis.clangTidy.checks.disabled": ["clang-diagnostic-error"],
   "editor.formatOnSave": true
 }

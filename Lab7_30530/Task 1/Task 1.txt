@@ -1,0 +1,2 @@
+When the Base class destructor is not virtual, it doesn't call the derived class's destructor.
+When the Base class destructor is virtual, it calls the derived class destructor first and then the base class destructor.
