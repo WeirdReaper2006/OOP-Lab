@@ -1,5 +1,7 @@
 {
   "files.associations": {
+    "*.erd": "json",
+    "*.vuerd": "json",
     "ostream": "cpp",
     "format": "cpp",
     "vector": "cpp",
@@ -12,7 +14,14 @@
     "xutility": "cpp",
     "exception": "cpp",
     "memory": "cpp",
-    "iterator": "cpp"
+    "iterator": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "map": "cpp",
+    "optional": "cpp",
+    "sstream": "cpp",
+    "tuple": "cpp",
+    "utility": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp.codeAnalysis.clangTidy.checks.disabled": ["clang-diagnostic-error"],
