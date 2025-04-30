@@ -17,6 +17,7 @@ int main()
     {
         cout << x << " ";
     }
+    cout << endl;
 
     // Example of deleting an element from the middle of a list in C++ (if location is not known)
     list<int> myList2 = {1, 2, 3, 4, 5};
