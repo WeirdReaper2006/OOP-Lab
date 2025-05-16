@@ -11,8 +11,8 @@ using namespace std;
 class DynamicArray
 {
 private:
-    int *array = new int[size];
-    int size;
+    int *array = new int[size = 0];
+    int size = 0;
 
 public:
     DynamicArray(int s) : size(s) {};
