@@ -4,8 +4,8 @@
 #include <iostream>
 #include <list>
 #include <string>
-#include "../headers/process.h"             // Include the header file for the Process class
-#include "../headers/processComparator.cpp" // Include the header file for the ProcessComparator class
+#include "../headers/process.h"           // Include the header file for the Process class
+#include "../headers/processComparator.h" // Include the header file for the ProcessComparator class
 
 using namespace std;
 
